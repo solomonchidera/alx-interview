@@ -1,8 +1,18 @@
 def pascal_triangle(n):
     """
-    0-pascal_triangle.py
-    """
+    Generate Pascal's Triangle of size n.
 
+    Args:
+        n (int): The number of rows in the Pascal's Triangle.
+
+    Returns:
+        list of lists of ints: A list of lists representing Pascal's Triangle.
+            Each inner list represents a row in the triangle.
+
+    Example:
+        >>> pascal_triangle(5)
+        [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
+    """
     triangle = []
 
     for i in range(n):
