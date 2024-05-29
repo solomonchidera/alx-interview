@@ -1,9 +1,8 @@
-"""
-0-pascal_triangle.py
-"""
-
-
 def pascal_triangle(n):
+    """
+    0-pascal_triangle.py
+    """
+
     triangle = []
 
     for i in range(n):
