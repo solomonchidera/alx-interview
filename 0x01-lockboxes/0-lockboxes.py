@@ -29,4 +29,3 @@ def canUnlockAll(boxes):
 
     # Check if all boxes are unlocked
     return len(unlocked) == n
-
