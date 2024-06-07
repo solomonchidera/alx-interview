@@ -1,6 +1,13 @@
 #!/usr/bin/python3
+"""
+Module Docs
+"""
+
 
 def canUnlockAll(boxes):
+    """
+    Function Docs
+    """
     # Number of boxes
     n = len(boxes)
 
@@ -22,3 +29,4 @@ def canUnlockAll(boxes):
 
     # Check if all boxes are unlocked
     return len(unlocked) == n
+
