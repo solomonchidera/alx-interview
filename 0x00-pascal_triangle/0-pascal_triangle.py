@@ -1,26 +1,23 @@
+#!/usr/bin/python3
+"""Define pascal_triangle function"""
+
+
 def pascal_triangle(n):
+    """Definition of pascal_triangle function
+      args: n the length od the triangle
+      Returns a list of lists of integers representing
+      the Pascal’s triangle
     """
-    Generate Pascal's Triangle of size n.
 
-    Args:
-        n (int): The number of rows in the Pascal's Triangle.
+    if n <= 0:
+        return []
 
-    Returns:
-        list of lists of ints: A list of lists representing Pascal's Triangle.
-            Each inner list represents a row in the triangle.
-
-    Example:
-        >>> pascal_triangle(5)
-        [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
-    """
-    triangle = []
-
-    for i in range(n):
-        row = [1]
-        if i > 0:
-            for j in range(1, i):
-                row.append(triangle[i-1][j-1] + triangle[i-1][j])
-            row.append(1)
-        triangle.append(row)
-
-    return triangle
+    pascal_triangle = [[1]]
+    while len(pascal_triangle) != n:
+        last_elmt = pascal_triangle[-1]
+        next_elmt = [1]
+        for i in range(0, len(last_elmt) - 1):
+            next_elmt.append(last_elmt[i] + last_elmt[i + 1])
+        next_elmt.append(1)
+        pascal_triangle.append(next_elmt)
+    return pascal_triangle
