@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""doc doc doc"""
 import sys
+""" Module Docs """
 
 
 def solve_queens_problem(board_size):
-    """doc doc doc"""
+    """ Function doc """
 
     def is_valid_position(pos, occupied_pos):
-        """doc doc doc"""
+        """ Function doc """
         for i in range(len(occupied_pos)):
             if (
                 occupied_pos[i] == pos or
@@ -18,7 +18,7 @@ def solve_queens_problem(board_size):
         return True
 
     def place_queens(board_size, index, occupied_pos, solutions):
-        """doc doc doc"""
+        """ Function doc """
         if index == board_size:
             solutions.append(occupied_pos[:])
             return
