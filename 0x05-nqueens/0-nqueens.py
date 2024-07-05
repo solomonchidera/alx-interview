@@ -35,7 +35,7 @@ def solve_queens_problem(board_size):
 
 
 def main():
-    """doc doc doc"""
+    """ Main Function doc """
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
         sys.exit(1)
