@@ -3,8 +3,9 @@
 Module Name: making_change
 
 Description:
-    This module provides a solution to the coin change problem using dynamic programming.
-    It determines the minimum number of coins needed to make a given amount from a set of coin denominations.
+    This module provides a solution to the coin change problem.
+    It determines the minimum number of coins needed to make a given
+    amount from a set of coin denominations.
 
 Contents:
     - makeChange(coins, total): Function to solve the coin change problem
