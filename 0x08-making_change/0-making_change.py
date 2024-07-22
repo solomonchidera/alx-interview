@@ -12,7 +12,7 @@ Contents:
 
 Usage:
     from making_change import makeChange
-    
+
     coins = [1, 2, 5]
     total = 11
     result = makeChange(coins, total)
