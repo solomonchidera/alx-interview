@@ -1,40 +1,35 @@
 #!/usr/bin/python3
 """
-Module doc
+0x0A. Prime Game
 """
 
 
+def listPrime(n):
+    """A function that generates a list of primes."""
+    numbers = []
+    sieve = [True] * (n + 1)
+    for p in range(2, n + 1):
+        if sieve[p]:
+            numbers.append(p)
+            for i in range(p, n + 1, p):
+                sieve[i] = False
+    return numbers
+
+
 def isWinner(x, nums):
-    """
-    Function doc
-    """
-    def is_prime(n):
-        if n < 2:
-            return False
-        for i in range(2, int(n**0.5) + 1):
-            if n % i == 0:
-                return False
-        return True
-
-
-    def count_primes(n):
-        """
-        Module doc
-        """
-        count = 0
-        for i in range(2, n + 1):
-            if is_prime(i):
-                count += 1
-        return count
-
-    maria_wins = 0
-    for n in nums:
-        if count_primes(n) % 2 == 1:
-            maria_wins += 1
-
-    if maria_wins > x / 2:
+    """A function that determines the winner of the prime games."""
+    ben_score = maria_score = 0
+    for num in nums[:x]:
+        turn = 0
+        for pick in listPrime(num):
+            turn = 1 - turn
+        if turn:
+            maria_score += 1
+        else:
+            ben_score += 1
+    if maria_score > ben_score:
         return "Maria"
-    elif maria_wins < x / 2:
+    elif maria_score < ben_score:
         return "Ben"
     else:
         return None
